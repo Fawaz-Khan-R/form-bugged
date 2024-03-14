@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { saveToLocalStorage, loadFromLocalStorage } from './Utils';
 import './Form.css'; 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -38,6 +40,8 @@ const Form = () => {
     ) {
       saveToLocalStorage(formData);
       console.log('Form submitted:', formData);
+      toast.success('Form submitted successfully!', { position: toast.POSITION.TOP_CENTER });
+
     }
   };
 
