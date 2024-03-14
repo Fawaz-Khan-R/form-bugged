@@ -57,7 +57,7 @@ const Form = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            
+            required
           />
         </div>
         <div className="form-group">
@@ -68,7 +68,7 @@ const Form = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            
+            required
           />
         </div>
         <div className="form-group">
@@ -79,6 +79,7 @@ const Form = () => {
             name="dob"
             value={formData.dob}
             onChange={handleChange}
+              required
           />
         </div>
         <div className="form-group">
@@ -89,6 +90,7 @@ const Form = () => {
             name="address"
             value={formData.address}
             onChange={handleChange}
+            required
           />
         </div>
         <div className="form-group">
@@ -99,6 +101,7 @@ const Form = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
+            required
           />
         </div>
         <div className="form-group">
@@ -108,6 +111,7 @@ const Form = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
+            required
           ></textarea>
         </div>
         <button type="submit" className="submit-btn">Submit</button>
