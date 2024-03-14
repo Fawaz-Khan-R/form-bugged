@@ -40,8 +40,9 @@ const Form = () => {
     ) {
       saveToLocalStorage(formData);
       console.log('Form submitted:', formData);
-      toast.success('Form submitted successfully!', { position: toast.POSITION.TOP_CENTER });
-
+      toast.success('Form submitted successfully!');
+    } else {
+      toast.error('Please fill out all required fields.');
     }
   };
 
