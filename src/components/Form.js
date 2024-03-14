@@ -59,7 +59,7 @@ const Form = () => {
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
-            type="string"
+            type="email"
             id="email"
             name="email"
             value={formData.email}
