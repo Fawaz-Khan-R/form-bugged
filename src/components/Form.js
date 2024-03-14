@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { saveToLocalStorage, loadFromLocalStorage } from './Utils';
 import './Form.css'; 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -38,6 +40,8 @@ const Form = () => {
     ) {
       saveToLocalStorage(formData);
       console.log('Form submitted:', formData);
+      toast.success('Form submitted successfully!', { position: toast.POSITION.TOP_CENTER });
+
     }
   };
 
@@ -53,7 +57,7 @@ const Form = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            
+            required
           />
         </div>
         <div className="form-group">
@@ -64,7 +68,7 @@ const Form = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            
+            required
           />
         </div>
         <div className="form-group">
@@ -75,6 +79,7 @@ const Form = () => {
             name="dob"
             value={formData.dob}
             onChange={handleChange}
+              required
           />
         </div>
         <div className="form-group">
@@ -85,6 +90,7 @@ const Form = () => {
             name="address"
             value={formData.address}
             onChange={handleChange}
+            required
           />
         </div>
         <div className="form-group">
@@ -95,6 +101,7 @@ const Form = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
+            required
           />
         </div>
         <div className="form-group">
@@ -104,6 +111,7 @@ const Form = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
+            required
           ></textarea>
         </div>
         <button type="submit" className="submit-btn">Submit</button>
