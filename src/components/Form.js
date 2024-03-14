@@ -36,7 +36,7 @@ const Form = () => {
       formData.phone &&
       formData.message
     ) {
-    //   saveToLocalStorage(formData);
+      saveToLocalStorage(formData);
       console.log('Form submitted:', formData);
     }
   };
