@@ -90,7 +90,7 @@ const Form = () => {
         <div className="form-group">
           <label htmlFor="phone">Phone Number:</label>
           <input
-            type="string"
+            type="number"
             id="phone"
             name="phone"
             value={formData.phone}
